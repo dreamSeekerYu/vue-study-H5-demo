@@ -41,6 +41,15 @@ npm i stylus stylus-loader -D
 <style lang="stylus">即可以开始使用stylus
 ```
 
+#### 五、配置 zeit 自动化上线
+
+```
+gitHub 配置 zeit 上线
+https://zeit.co/signup 关联 github 账号和 github 项目即可
+访问地址：
+https://vue-study-h5-demo.now.sh/
+```
+
 //TODO:以下的为待完成项
 
 #### 配置移动端兼容 px2rem 插件
