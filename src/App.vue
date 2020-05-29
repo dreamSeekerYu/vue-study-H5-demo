@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>|
-      <router-link to="/pug">pug模板</router-link>
+      <router-link to="/pug">pug模板</router-link>|
+      <router-link to="/mand-ui">mand-ui</router-link>
     </div>
     <router-view />
   </div>

@@ -52,7 +52,9 @@ https://vue-study-h5-demo.now.sh/
 
 //TODO:以下的为待完成项
 
-#### 配置移动端兼容 px2rem 插件
+#### 配置移动端兼容 px2rem 插件 使用了 postcss-pxtorem
+
+配置 mand ==> rem 时已经使用了 rem 适配
 
 #### 配置图片懒加载
 
@@ -72,7 +74,72 @@ https://vue-study-h5-demo.now.sh/
 
 #### 添加并封装 vconsole 调试工具
 
-#### 配置常见的移动端的组件库
+#### 配置常见的移动端的组件库 mand mobile
+
+```
+配置按需引入
+babel.config.js
+  "plugins": [
+      ["import", {
+        "libraryName": "mand-mobile",
+        "libraryDirectory": "lib"
+      }]
+    ]
+```
+
+```
+配置 rem 适配
+
+css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            rootValue: 37.5, // 换算的基数
+            minPixelValue: 2,
+            propList: ['*'],
+          }),
+        ],
+      },
+    },
+  },
+<!-- .postcssrc.js文件 会被webpack 的配置覆盖掉
+  module.exports = {
+    plugins: [
+      require('postcss-pxtorem')({
+        rootValue: 100,
+        minPixelValue: 2,
+        propWhiteList: []
+      })
+    ]
+  }
+webpack配置  会被css loader 的配置覆盖掉
+  const pxtorem = require('postcss-pxtorem');
+
+  // Postcss
+  webpackConfig.postcss.push(pxtorem({
+    rootValue: 100,
+    minPixelValue: 2,
+    propWhiteList: []
+  }))
+
+  // Poststylus（使用源码时）
+  const poststylus = require('poststylus')
+
+  webpackConfig.plugins.push(new webpack.LoaderOptionsPlugin({
+    options: {
+      stylus: {
+        use: [
+          poststylus(pxtorem({
+            rootValue: 100,
+            minPixelValue: 2,
+            propWhiteList: []
+          }))
+        ]
+      }
+    }
+  })) -->
+```
 
 #### 配置 VS code eslint 规范
 
