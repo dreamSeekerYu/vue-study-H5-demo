@@ -74,6 +74,12 @@ https://vue-study-h5-demo.now.sh/
 
 #### 添加并封装 vconsole 调试工具
 
+```
+npm i vconsole
+import Vconsole from 'vconsole'
+new Vconsole
+```
+
 #### 配置常见的移动端的组件库 mand mobile
 
 ```
@@ -149,7 +155,13 @@ webpack配置  会被css loader 的配置覆盖掉
 
 #### H5 视频播放器 （xgplayer X5 内核规范使用）
 
+[xgplayer 播放器](https://h5player.bytedance.com/gettingStarted/#安装)
+npm install xgplayer
+
 #### 配置二维码插件
+
+npm install --save qrcode.vue
+使用参考 src/components/qrcode.vue 文件
 
 #### 配置图片合成插件 html2canvas
 
@@ -166,3 +178,7 @@ webpack配置  会被css loader 的配置覆盖掉
 #### 调用系统通知
 
 #### 红包动画
+
+#### 配置到公众号里面
+
+需要安全域名备案，以及微信认证（个人主体不能完成认证）暂时不行，以后完善吧
