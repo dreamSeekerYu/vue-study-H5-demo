@@ -52,11 +52,25 @@ https://vue-study-h5-demo.now.sh/
 
 //TODO:以下的为待完成项
 
-#### 配置移动端兼容 px2rem 插件 使用了 postcss-pxtorem
+#### 六、配置移动端兼容 px2rem 插件 使用了 postcss-pxtorem
 
 配置 mand ==> rem 时已经使用了 rem 适配
 
-#### 配置图片懒加载
+#### 七、配置图片懒加载
+
+```
+npm install vue-lazyload --save-dev
+
+import VueLazyLoad from 'vue-lazyload'
+
+Vue.use(VueLazyLoad,{
+  error:'./static/error.png',
+  loading:'./static/loading.png'
+})
+
+    <img class="item-pic" v-lazy="newItem.picUrl"/>
+    <div v-lazy:background-image="imgLink"></div>
+```
 
 #### 配置 better-Scroll
 
@@ -75,40 +89,46 @@ https://vue-study-h5-demo.now.sh/
 #### 添加并封装 vconsole 调试工具
 
 ```
+
 npm i vconsole
 import Vconsole from 'vconsole'
 new Vconsole
+
 ```
 
 #### 配置常见的移动端的组件库 mand mobile
 
 ```
+
 配置按需引入
 babel.config.js
-  "plugins": [
-      ["import", {
-        "libraryName": "mand-mobile",
-        "libraryDirectory": "lib"
-      }]
-    ]
+"plugins": [
+  ["import", {
+    "libraryName": "mand-mobile",
+    "libraryDirectory": "lib"
+  }]
+]
+
 ```
 
 ```
+
 配置 rem 适配
 
 css: {
-    loaderOptions: {
-      postcss: {
-        plugins: [
-          require('postcss-pxtorem')({
-            rootValue: 37.5, // 换算的基数
-            minPixelValue: 2,
-            propList: ['*'],
-          }),
-        ],
-      },
+  loaderOptions: {
+    postcss: {
+      plugins: [
+        require('postcss-pxtorem')({
+          rootValue: 37.5, // 换算的基数
+          minPixelValue: 2,
+          propList: ['*'],
+        }),
+      ],
     },
   },
+},
+
 <!-- .postcssrc.js文件 会被webpack 的配置覆盖掉
   module.exports = {
     plugins: [
@@ -145,6 +165,7 @@ webpack配置  会被css loader 的配置覆盖掉
       }
     }
   })) -->
+
 ```
 
 #### 配置 VS code eslint 规范
@@ -182,3 +203,7 @@ npm install --save qrcode.vue
 #### 配置到公众号里面
 
 需要安全域名备案，以及微信认证（个人主体不能完成认证）暂时不行，以后完善吧
+
+```
+
+```

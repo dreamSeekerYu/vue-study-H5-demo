@@ -30,6 +30,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "mand-ui" */ '../views/mand-ui'),
   },
+  {
+    path: '/lazyloadImage',
+    name: 'lazyloadImage',
+    component: () =>
+      import(/* webpackChunkName: "mand-ui" */ '../views/lazyloadImage'),
+  },
 ]
 
 const router = new VueRouter({
