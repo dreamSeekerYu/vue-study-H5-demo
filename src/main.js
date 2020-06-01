@@ -11,7 +11,7 @@ import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueLazyLoad, {
   preLoad: 1.3,
   error: './assets/logo.png',
-  loading: './assets/loading@2x.png',
+  loading: './assets/loading@2x.png'
 })
 
 Vue.config.productionTip = false
@@ -19,5 +19,5 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount('#app')

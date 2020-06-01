@@ -43,8 +43,7 @@ export default {
   },
   data() {
     return {
-      youdaoUrl:
-        'http://note.youdao.com/noteshare?id=cdceb903fc357fcd530728e5c613dfd8'
+      youdaoUrl: 'http://note.youdao.com/noteshare?id=cdceb903fc357fcd530728e5c613dfd8'
     }
   }
 }

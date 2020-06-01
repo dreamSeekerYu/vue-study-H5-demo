@@ -13,17 +13,16 @@
         <span class="holder" slot="left"></span>
       </md-cell-item>
       <md-cell-item title="Mand Mobile" brief="A mobile UI toolkit" arrow>
-        <p
-          slot="children"
-          style="font-size:0.24rem;color:#858B9C;"
-        >面向金融场景的Vue移动端UI组件库，丰富、灵活、实用，快速搭建优质的金融类产品，让复杂的金融场景变简单。基于「合理、好用」设计价值观，从交互操作、视觉抽象、图形可视等角度共同解决问题。</p>
+        <p slot="children" style="font-size:0.24rem;color:#858B9C;">
+          面向金融场景的Vue移动端UI组件库，丰富、灵活、实用，快速搭建优质的金融类产品，让复杂的金融场景变简单。基于「合理、好用」设计价值观，从交互操作、视觉抽象、图形可视等角度共同解决问题。
+        </p>
       </md-cell-item>
     </md-field>
   </div>
 </template>
 
 <script>
-import { Field, CellItem, Switch } from 'mand-mobile'
+import {Field, CellItem, Switch} from 'mand-mobile'
 
 export default {
   name: 'cell-item-demo',
