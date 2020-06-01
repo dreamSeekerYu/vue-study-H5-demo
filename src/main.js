@@ -13,6 +13,8 @@ Vue.use(VueLazyLoad, {
   error: './assets/logo.png',
   loading: './assets/loading@2x.png'
 })
+// filters
+import './filters'
 
 Vue.config.productionTip = false
 
