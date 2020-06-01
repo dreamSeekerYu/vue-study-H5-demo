@@ -4,8 +4,8 @@ import router from './router'
 import store from './store'
 
 // 配置 vconsole
-import Vconsole from 'vconsole'
-new Vconsole()
+// import Vconsole from 'vconsole'
+// new Vconsole()
 // 配置图片懒加载
 import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueLazyLoad, {

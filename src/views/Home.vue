@@ -23,7 +23,6 @@
     <li class="mid">mid size</li>
     <li class="min">min size</li>
     <hr />
-    <videoPlayer />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
@@ -33,13 +32,11 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 import qrcode from '@/components/qrcode.vue'
 
-import videoPlayer from '@/components/xgplayer.vue'
 export default {
   name: 'Home',
   components: {
     // HelloWorld
-    qrcode,
-    videoPlayer
+    qrcode
   },
   data() {
     return {

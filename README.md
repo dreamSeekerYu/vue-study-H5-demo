@@ -2,7 +2,43 @@
 
 常见的移动端项目配置练习 demo
 
-#### 一、@vue/cli 4.4.1 创建的模板
+<span id="top">目录</span>
+
+- [✅ Vue-cli4](#cliorigin)
+- [✅ 指定 依赖镜像源](#npmorg)
+- [✅ 配置 pug 模板](#pug)
+- [✅ 配置 stylus](#stylus)
+- [✅ 配置 zeit 自动化部署项目](#zeit)
+- [✅ 配置 px2rem ](#px2rem)
+- [✅ 配置 配置图片懒加载](#lazyloadimg)
+- [配置 better-scroll](#betterscroll)
+- [✅ 配置 请求代理以及优化](#proxy)
+- [✅ 配置 splitchunks 打包优化](#splitchunks)
+- [配置 CDN](#cdn)
+- [配置 IE 兼容](#ie)
+- [✅ 配置 生产环境关闭 console](#noconsole)
+- [配置 请求封装](#request)
+- [✅ 配置 移动端调试 vconsole](#vconsole)
+- [✅ 配置 mand-mobile](#mandmobile)
+- [✅ 配置 eslint pretter 开发规范](#pettereslint)
+- [配置 音频视频](#videoaudio)
+- [配置 导入导出 exel 表格](#exel)
+- [✅ 配置 西瓜视频播放器](#videoplayer)
+- [✅ 配置 qrcode 二维码](#qrcode)
+- [配置 html2canvas 合成图片以及 pdf 文件](#html2canvas)
+- [配置多环境变量](#env)
+- [配置 微信 jsSDK](#weixinsdk)
+- [配置 埋点与错误处理](#errorhandler)
+- [配置 markdowm 编辑器](#markdowm)
+- [配置 editor 富文本编辑器](#editor)
+- [配置 封装 系统通知 notify](#notify)
+- [配置 微信红包](#mony)
+- [配置 点赞动画红包](#dianzan)
+- [配置 公众号配置](#gongzonghao)
+- [配置 全局 scss，以及主题皮肤切换](#scss)
+- [配置 多语言](#multilanguage)
+
+#### <span id="cliorigin">✅ 一、@vue/cli 4.4.1 创建的模板 </span>
 
 [cli 配合文件官网](https://cli.vuejs.org/config/)
 
@@ -12,9 +48,13 @@
   yarn build
 ```
 
-#### 二、 根目录配置 .npmrc .yarnrc 文件指定淘宝镜像源
+[▲ 回顶部](#top)
 
-#### 三、 尝试配置并使用 pug 模板
+#### <span id="npmorg">✅ 二、 根目录配置 .npmrc .yarnrc 文件指定淘宝镜像源 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="pug">✅ 三、 尝试配置并使用 pug 模板</span>
 
 下包 npm i -D pug pug-html-loader pug-plain-loader vue.config.js 文件中配置
 
@@ -30,7 +70,9 @@ module.exports = {
 }
 ```
 
-#### 四、配置并且使用 stylus
+[▲ 回顶部](#top)
+
+#### <span id="stylus">✅ 四、配置并且使用 stylus</span>
 
 暂时自动保存导致自动跟改为 scss 样式，之后修改
 
@@ -40,7 +82,9 @@ npm i stylus stylus-loader -D
 <style lang="stylus">即可以开始使用stylus
 ```
 
-#### 五、配置 zeit 自动化上线
+[▲ 回顶部](#top)
+
+#### <span id="zeit">✅ 五、配置 zeit 自动化上线</span>
 
 ```
 gitHub 配置 zeit 上线
@@ -49,13 +93,15 @@ https://zeit.co/signup 关联 github 账号和 github 项目即可
 https://vue-study-h5-demo.now.sh/
 ```
 
-//TODO:以下的为待完成项
+[▲ 回顶部](#top)
 
-#### 六、配置移动端兼容 px2rem 插件 使用了 postcss-pxtorem
+#### <span id="px2rem">✅ 六、配置移动端兼容 px2rem 插件 使用了 postcss-pxtorem</span>
 
 配置 mand ==> rem 时已经使用了 rem 适配
 
-#### 七、配置图片懒加载
+[▲ 回顶部](#top)
+
+#### <span id="lazyloadimg">✅ 七、配置图片懒加载</span>
 
 ```
 npm install vue-lazyload --save-dev
@@ -71,17 +117,29 @@ Vue.use(VueLazyLoad,{
     <div v-lazy:background-image="imgLink"></div>
 ```
 
-#### 配置 better-Scroll
+[▲ 回顶部](#top)
 
-#### 配置别名、配置代理、优化分析插件
+#### <span id="betterscroll"> 八、配置 better-Scroll</span>
 
-#### 配置 splitChunks 单独打包第三方模块
+[▲ 回顶部](#top)
 
-#### 公共库改用 CDN 引入
+#### ✅ <span id="proxy">配置别名、配置代理、优化分析插件</span>
 
-#### 添加 IE 兼容
+[▲ 回顶部](#top)
 
-#### 生产去掉 console.log
+#### ✅ <span id="splitchunks">配置 splitChunks 单独打包第三方模块</span>
+
+[▲ 回顶部](#top)
+
+#### <span id="cdn"> 公共库改用 CDN 引入</span>
+
+[▲ 回顶部](#top)
+
+#### <span id="ie"> 添加 IE 兼容</span>
+
+[▲ 回顶部](#top)
+
+#### ✅ <span id="noconsole"> 生产去掉 console.log</span>
 
 保留了测试环境和本地环境的 `console.log`
 
@@ -106,9 +164,13 @@ module.exports = {
 }
 ```
 
-#### 封装 axios / fetch
+[▲ 回顶部](#top)
 
-#### 添加并封装 vconsole 调试工具
+#### <span id="request"> 封装 axios / fetch </span>
+
+[▲ 回顶部](#top)
+
+#### ✅ <span id="vconsole">添加并封装 vconsole 调试工具 </span>
 
 ```
 
@@ -118,7 +180,9 @@ new Vconsole
 
 ```
 
-#### 配置常见的移动端的组件库 mand mobile
+[▲ 回顶部](#top)
+
+#### ✅ <span id="mandmobile">配置常见的移动端的组件库 mand mobile </span>
 
 ```
 
@@ -190,7 +254,9 @@ webpack配置  会被css loader 的配置覆盖掉
 
 ```
 
-#### 配置 VS code eslint 规范 ✅ Eslint + Pettier 统一开发规范
+[▲ 回顶部](#top)
+
+#### ✅ <span id="pettereslint">配置 VS code eslint 规范 ✅ Eslint + Pettier 统一开发规范 </span>
 
 VScode 安装 `eslint` `prettier` `vetur` 插件
 
@@ -241,38 +307,68 @@ Vscode setting.json 设置
     "vetur.format.defaultFormatter.ts": "none",
 ```
 
-#### 视频/音频录制
+[▲ 回顶部](#top)
 
-#### 导入导出 excel 功能
+#### <span id="videoaudio">视频/音频录制</span>
 
-#### H5 视频播放器 （xgplayer X5 内核规范使用）
+[▲ 回顶部](#top)
 
-[xgplayer 播放器](https://h5player.bytedance.com/gettingStarted/#安装) npm install xgplayer
+#### <span id="exel">导入导出 exel 功能 </span>
 
-#### 配置二维码插件
+[▲ 回顶部](#top)
+
+#### ✅ <span id="videoplayer"> H5 视频播放器 （xgplayer X5 内核规范使用） </span>
+
+[xgplayer 播放器](https://h5player.bytedance.com/gettingStarted/#安装) npm install xgplayer [▲ 回顶部](#top)
+
+#### ✅ <span id="qrcode"> 配置二维码插件 </span>
 
 npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 
-#### 配置图片合成插件 html2canvas
+[▲ 回顶部](#top)
 
-#### 配置多环境切换
+#### <span id="html2canvas"> 配置图片合成插件 html2canvas </span>
 
-#### 配置微信 jsSDK
+[▲ 回顶部](#top)
 
-#### 配置埋点与错误处理
+#### <span id="env"> 配置多环境切换 </span>
 
-#### 配置 markdown 插件 解决 img C/V 上传问题
+[▲ 回顶部](#top)
 
-#### 配置富文本编辑器
+#### <span id="weixinsdk"> 配置微信 jsSDK </span>
 
-#### 调用系统通知
+[▲ 回顶部](#top)
 
-#### 红包动画
+#### <span id="errorhandler"> 配置埋点与错误处理 </span>
 
-#### 配置到公众号里面
+[▲ 回顶部](#top)
+
+#### <span id="markdowm"> 配置 markdown 插件 解决 img C/V 上传问题 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="editor"> 配置富文本编辑器 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="notify"> 调用系统通知 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="mony"> 红包动画 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="dianzan"> 点赞动画 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="gongzonghao"> 配置到公众号里面 </span>
 
 需要安全域名备案，以及微信认证（个人主体不能完成认证）暂时不行，以后完善吧
 
 ```
 
 ```
+
+[▲ 回顶部](#top)
