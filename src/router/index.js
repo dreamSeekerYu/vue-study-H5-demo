@@ -32,6 +32,11 @@ const routes = [
     path: '/lazyloadImage',
     name: 'lazyloadImage',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../views/lazyloadImage')
+  },
+  {
+    path: '/html2camvas',
+    name: 'html2camvas',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../components/html2canvas.vue')
   }
 ]
 

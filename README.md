@@ -19,7 +19,7 @@
 - [✅ 配置 移动端调试 vconsole](#vconsole)
 - [✅ 配置多环境变量](#env)
 - [✅ 配置 生产环境关闭 console](#noconsole)
-- [配置 埋点与错误处理](#errorhandler)
+- [配置 埋点(百度统计)与错误处理(sentry)](#errorhandler)
 - [✅ 配置 IE 兼容](#ie)
 - [配置 CDN](#cdn)//TODO:
 - [✅ 配置 splitchunks 打包优化](#splitchunks)
@@ -28,8 +28,9 @@
 - [✅ 配置 qrcode 二维码](#qrcode)
 - [✅ 配置 西瓜视频播放器](#videoplayer)
 - [配置 音频视频](#videoaudio)
+- [配置 echart.js 展示图表](#echart)
 - [配置 导入导出 exel 表格](#exel)
-- [配置 html2canvas 合成图片以及 pdf 文件](#html2canvas)
+- [✅ 配置 html2canvas 合成图片以及 pdf 文件](#html2canvas)
 - [配置 markdowm 编辑器](#markdowm)
 - [配置 editor 富文本编辑器](#editor)
 - [配置 封装 系统通知 notify](#notify)
@@ -37,6 +38,10 @@
 - [配置 微信红包](#mony)
 - [配置 微信 jsSDK](#weixinsdk)
 - [配置 公众号配置](#gongzonghao)
+- [配置 支付](#pay)
+- [配置 聊天室 socket.io](#socket)
+- [配置 百度地图、腾讯地图](#map)
+- [配置 three.js](#threejs)
 
 #### <span id="cliorigin">✅ 一、@vue/cli 4.4.1 创建的模板 </span>
 
