@@ -10,7 +10,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    console.log('验证去除console功能')
+  }
+}
 </script>
 
 <style lang="stylus">
