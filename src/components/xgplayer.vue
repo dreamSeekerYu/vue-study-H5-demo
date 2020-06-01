@@ -9,10 +9,9 @@
 import Player from 'xgplayer'
 export default {
   mounted() {
-    let player = new Player({
+    const player = new Player({
       id: 'mse',
-      url:
-        'https://download.10101111cdn.com/ucarcdnstore/mmc/mmc/bw_video2.mp4',
+      url: 'https://download.10101111cdn.com/ucarcdnstore/mmc/mmc/bw_video2.mp4',
       width: 375,
       height: 200,
       autoplay: true,

@@ -1,9 +1,11 @@
 import axios from 'axios'
 import store from '@/store'
 // import {Toast} from 'vant'
+// eslint-disable-next-line object-curly-spacing
 import {Toast} from 'mand-mobile'
 
 // 根据环境不同引入不同api地址
+// eslint-disable-next-line object-curly-spacing
 import {baseApi} from '@/config'
 // create an axios instance
 const service = axios.create({

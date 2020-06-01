@@ -25,7 +25,7 @@
 import {Field, CellItem, Switch} from 'mand-mobile'
 
 export default {
-  name: 'cell-item-demo',
+  name: 'CellItemDemo',
   /* DELETE */
   title: '多行列表',
   titleEnUS: 'Content List',

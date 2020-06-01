@@ -20,8 +20,8 @@
 - [✅ 配置多环境变量](#env)
 - [✅ 配置 生产环境关闭 console](#noconsole)
 - [配置 埋点与错误处理](#errorhandler)
-- [配置 IE 兼容](#ie)
-- [配置 CDN](#cdn)
+- [✅ 配置 IE 兼容](#ie)
+- [配置 CDN](#cdn)//TODO:
 - [✅ 配置 splitchunks 打包优化](#splitchunks)
 - [✅ 配置 zeit 自动化部署项目](#zeit)
 - [✅ 配置 mand-mobile](#mandmobile)
@@ -84,6 +84,31 @@ npm i stylus stylus-loader -D
 
 [▲ 回顶部](#top)
 
+#### <span id="scss">✅ 配置 全局 scss，以及主题皮肤切换 </span>
+
+```
+import '@/assets/css/index.scss'
+
+// 设置 js中可以访问 $cdn
+// 引入cdn
+import { $cdn } from '@/config'
+Vue.prototype.$cdn = $cdn
+在 css 和 js 使用
+
+<script>
+  console.log(this.$cdn)
+</script>
+<style lang="scss" scoped>
+  .logo {
+    width: 120px;
+    height: 120px;
+    background: url($cdn+'/weapp/logo.png') center / contain no-repeat;
+  }
+</style>
+```
+
+[▲ 回顶部](#top)
+
 #### <span id="zeit">✅ 五、配置 zeit 自动化上线</span>
 
 ```
@@ -136,6 +161,35 @@ Vue.use(VueLazyLoad,{
 [▲ 回顶部](#top)
 
 #### <span id="ie"> 添加 IE 兼容</span>
+
+之前的方式 会报 `@babel/polyfill` is deprecated. Please, use required parts of `core-js` and
+`regenerator-runtime/runtime` separately
+
+`@babel/polyfill` 废弃，使用 `core-js` 和 `regenerator-runtime`
+
+```bash
+npm i --save core-js regenerator-runtime
+```
+
+在 `main.js` 中添加
+
+```javascript
+// 兼容 IE
+// https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#babelpolyfill
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+```
+
+配置 `babel.config.js`
+
+```javascript
+const plugins = []
+
+module.exports = {
+  presets: [['@vue/cli-plugin-babel/preset', {useBuiltIns: 'usage', corejs: 3}]],
+  plugins
+}
+```
 
 [▲ 回顶部](#top)
 

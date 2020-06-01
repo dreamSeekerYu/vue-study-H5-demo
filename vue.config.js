@@ -2,6 +2,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
+const defaultSettings = require('./src/config/index.js')
 
 module.exports = {
   publicPath: './', // 署应用包时的基本 URL。 vue-router hash 模式使用
@@ -19,7 +20,7 @@ module.exports = {
       errors: true
     },
     proxy: {
-      //配置跨域
+      // 配置跨域
       '/api': {
         target: 'https://test.xxx.com',
         // ws:true,
@@ -90,7 +91,22 @@ module.exports = {
       config.optimization.runtimeChunk('single')
     })
   },
+  // css: {
+  //   loaderOptions: {
+  //     postcss: {
+  //       plugins: [
+  //         require('postcss-pxtorem')({
+  //           rootValue: 37.5, // 换算的基数
+  //           minPixelValue: 2,
+  //           propList: ['*']
+  //         })
+  //       ]
+  //     }
+  //   }
+  // },
   css: {
+    extract: IS_PROD,
+    sourceMap: false,
     loaderOptions: {
       postcss: {
         plugins: [
@@ -100,6 +116,16 @@ module.exports = {
             propList: ['*']
           })
         ]
+      },
+      scss: {
+        // 注入 `sass` 的 `mixin` `variables` 到全局, $cdn可以配置图片cdn
+        // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+        // 这种方法不生效
+        prependData: `
+          @import "assets/css/mixin.scss";
+          @import "assets/css/variables.scss";
+          $cdn: "${defaultSettings.$cdn}";
+          `
       }
     }
   }
