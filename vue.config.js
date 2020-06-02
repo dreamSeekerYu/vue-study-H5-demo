@@ -12,7 +12,8 @@ module.exports = {
   lintOnSave: !IS_PROD,
   productionSourceMap: false, // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建。
   devServer: {
-    port: 8888, // 端口
+    port: 80, // 端口
+    // host: 'wwww.baiyupeng.com', // 映射域名，需要配合 switch 代理到线上，使用本地localhost开发时关闭，
     open: true, // 启动后打开浏览器
     overlay: {
       //  当出现编译器错误或警告时，在浏览器中显示全屏覆盖层

@@ -15,7 +15,7 @@
 - [✅ 配置 请求封装](#request)
 - [配置 better-scroll](#betterscroll)
 - [✅ 配置 配置图片懒加载](#lazyloadimg)
-- [✅ 配置 请求代理以及优化](#proxy)
+- [✅ 配置 请求代理以及优化,配置映射域名和端口](#proxy)
 - [✅ 配置 移动端调试 vconsole](#vconsole)
 - [✅ 配置多环境变量](#env)
 - [✅ 配置 生产环境关闭 console](#noconsole)
@@ -27,6 +27,7 @@
 - [✅ 配置 mand-mobile](#mandmobile)
 - [✅ 配置 qrcode 二维码](#qrcode)
 - [✅ 配置 西瓜视频播放器](#videoplayer)
+- [ 配置 权限指令和路由权限](#directive)
 - [配置 音频视频](#videoaudio)
 - [配置 echart.js 展示图表](#echart)
 - [配置 导入导出 exel 表格](#exel)
@@ -391,6 +392,10 @@ npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 [▲ 回顶部](#top)
 
 #### <span id="env"> 配置多环境切换 </span>
+
+[▲ 回顶部](#top)
+
+#### <span id="directive"> 权限指令和路由权限 </span>
 
 [▲ 回顶部](#top)
 

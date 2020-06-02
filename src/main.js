@@ -18,6 +18,8 @@ Vue.use(VueLazyLoad, {
 })
 // filters
 import './filters'
+// 权限指令
+import './directive//permission'
 
 // 全局 scss 变量
 import '@/assets/css/index.scss'
