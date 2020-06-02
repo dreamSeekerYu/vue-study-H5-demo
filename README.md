@@ -34,7 +34,7 @@
 - [✅ 配置 html2canvas 合成图片以及 pdf 文件](#html2canvas)
 - [配置 markdowm 编辑器](#markdowm)
 - [配置 editor 富文本编辑器](#editor)
-- [配置 封装 系统通知 notify](#notify)
+- [✅ 配置 封装 系统通知 notify](#notify)
 - [配置 点赞动画红包](#dianzan)
 - [配置 微信红包](#mony)
 - [配置 微信 jsSDK](#weixinsdk)
