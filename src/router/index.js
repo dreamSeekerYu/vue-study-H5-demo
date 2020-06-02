@@ -37,6 +37,11 @@ const routes = [
     path: '/html2camvas',
     name: 'html2camvas',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../components/html2canvas.vue')
+  },
+  {
+    path: '/storage',
+    name: 'storage',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../views/storage')
   }
 ]
 

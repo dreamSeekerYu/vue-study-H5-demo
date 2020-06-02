@@ -6,7 +6,7 @@
         <router-link to="/pug">pug模板</router-link>| <router-link to="/mand-ui">mand-ui</router-link>|
         <router-link to="/lazyloadImage">lazyloadImage</router-link>|
       </p>
-      <p><router-link to="/html2camvas">html2camvas</router-link>|</p>
+      <p><router-link to="/html2camvas">html2camvas</router-link>|<router-link to="/storage">storage</router-link>|</p>
     </div>
     <router-view />
   </div>

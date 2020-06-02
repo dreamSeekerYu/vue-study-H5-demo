@@ -266,9 +266,10 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'object-curly-spacing': [
       2,
-      'always',
+      'never',
       {
-        objectsInObjects: false
+        objectsInObjects: true,
+        arraysInObjects: true
       }
     ],
     'array-bracket-spacing': [2, 'never']
