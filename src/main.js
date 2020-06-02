@@ -20,6 +20,8 @@ Vue.use(VueLazyLoad, {
 import './filters'
 // 权限指令
 import './directive//permission'
+// 省略号指令
+import './directive//ellipsis'
 
 // 全局 scss 变量
 import '@/assets/css/index.scss'
