@@ -6,11 +6,16 @@ import store from './store'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
+import Directives from './JS/directives'
+
 // 配置 vconsole
 // import Vconsole from 'vconsole'
 // new Vconsole()
 // 配置图片懒加载
 import VueLazyLoad from 'vue-lazyload'
+
+Vue.use(Directives)
+
 Vue.use(VueLazyLoad, {
   preLoad: 1.3,
   error: './assets/logo.png',

@@ -43,8 +43,9 @@
 - [配置 聊天室 socket.io](#socket)
 - [配置 百度地图、腾讯地图](#map)
 - [配置 three.js](#threejs)
+- [✅ 配置 three.js](#directive)
 
-#### <span id="cliorigin">✅ 一、@vue/cli 4.4.1 创建的模板 </span>
+
 
 [cli 配合文件官网](https://cli.vuejs.org/config/)
 
@@ -435,4 +436,18 @@ npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 
 ```
 
+[▲ 回顶部](#top)
+
+
+#### <span id="directive"> 配置比较常用的 vue 指令 </span>
+```
+复制粘贴指令 v-copy
+长按指令 v-longpress
+输入框防抖指令 v-debounce
+禁止表情及特殊字符 v-emoji
+图片懒加载 v-LazyLoad
+权限校验指令 v-premission
+实现页面水印 v-waterMarker
+拖拽指令 v-draggable
+```
 [▲ 回顶部](#top)
