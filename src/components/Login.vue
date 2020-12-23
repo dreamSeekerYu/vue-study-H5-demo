@@ -1,18 +1,18 @@
 <template>
-<div v-if="show">
-  <el-dialog title="动态登录" :visible.sync="show">
-    <div>
-      <el-input v-model="username" />
-      <el-input v-model="password" />
-    </div>
-    <div slot="footer">
-      <el-button @click="show = false">取 消</el-button>
-      <el-button type="primary" @click="success">确 定</el-button>
-    </div>
-  </el-dialog>
-</div>
+  <div v-show="show">
+    <el-dialog title="动态登录" :visible.sync="show">
+      <div>
+        <el-input v-model="username" placeholder="请输入内容"></el-input>
+        <el-input v-model="password" placeholder="请输入内容"></el-input>
+      </div>
+      <div slot="footer">
+        <el-button @click="fail">取 消</el-button>
+        <el-button type="primary" @click="success">确 定</el-button>
+      </div>
+    </el-dialog>
+  </div>
 
-<!-- 登录框 -->
+  <!-- 登录框 -->
 </template>
 
 <script>
@@ -42,12 +42,19 @@ export default {
       this.password = ''
     },
     success() {
-      this.hideModal()
       this.resolve && this.resolve()
+      this.hideModal()
     },
     fail() {
-      this.hideModal()
       this.reject && this.reject()
+      this.hideModal()
+    }
+  },
+  watch: {
+    show() {
+      if (!this.show) {
+        this.fail()
+      }
     }
   }
 }

@@ -49,3 +49,12 @@ axiosRetry(axios, {
       return (error.config.method === 'get' || error.config.method === 'post');
   }
 });
+
+
+// 考虑并发请求的处理
+// 封装 all 函数
+
+// Promise.all([p1, p2]).then(function(values) {
+//   console.log(values);//values为一个数组
+//   ///进行你的下一步操作
+//  });
