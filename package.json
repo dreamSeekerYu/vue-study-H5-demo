@@ -13,6 +13,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "core-js": "^3.6.5",
     "element-resize-detector": "^1.2.1",
+    "element-ui": "^2.14.1",
     "html2canvas": "^1.0.0-rc.5",
     "js-cookie": "^2.2.1",
     "mand-mobile": "^2.5.10",

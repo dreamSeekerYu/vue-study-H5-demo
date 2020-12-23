@@ -6,6 +6,9 @@ import store from './store'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 import Directives from './directive'
 import ellipsis  from './components/ellipsis'
 import SearchHighlight from './components/SearchHighlight'
@@ -18,6 +21,7 @@ import SearchHighlight from './components/SearchHighlight'
 // 配置图片懒加载
 import VueLazyLoad from 'vue-lazyload'
 
+Vue.use(ElementUI);
 Vue.use(Directives)
 Vue.component('ellipsis',ellipsis)
 Vue.component('search-highlight', SearchHighlight)

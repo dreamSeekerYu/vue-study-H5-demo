@@ -28,6 +28,9 @@
 </template>
 
 <script>
+import {
+  login
+} from './utils/login'
 export default {
   data() {
     return {
@@ -36,7 +39,6 @@ export default {
       btnText: '查看全部',
       ellipsisText: '...',
       link: 'https://github.com/Lushenggang/vue-overflow-ellipsis',
-
       ellipsis: true,
       ellipsisConfig: {
         line: 5,
@@ -48,6 +50,13 @@ export default {
   },
   mounted() {
     console.log('验证去除console功能')
+      login()
+        .then(res => {
+          console.log('%c login....', 'color: red; font-style: italic', res)
+        })
+        .catch(err => {
+          console.log('%c res....', 'color: red; font-style: italic', err)
+        })
   },
   methods: {
     changRows() {
