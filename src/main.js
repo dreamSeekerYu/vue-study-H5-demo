@@ -6,7 +6,11 @@ import store from './store'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
-import Directives from './JS/directives'
+import Directives from './directive'
+import ellipsis  from './components/ellipsis'
+import SearchHighlight from './components/SearchHighlight'
+// import ellipsis from "vue-overflow-ellipsis"
+// import "vue-overflow-ellipsis/dist/index.css"
 
 // 配置 vconsole
 // import Vconsole from 'vconsole'
@@ -15,6 +19,8 @@ import Directives from './JS/directives'
 import VueLazyLoad from 'vue-lazyload'
 
 Vue.use(Directives)
+Vue.component('ellipsis',ellipsis)
+Vue.component('search-highlight', SearchHighlight)
 
 Vue.use(VueLazyLoad, {
   preLoad: 1.3,
@@ -24,9 +30,9 @@ Vue.use(VueLazyLoad, {
 // filters
 import './filters'
 // 权限指令
-import './directive//permission'
+import './directive/permission'
 // 省略号指令
-import './directive//ellipsis'
+import './directive/ellipsis'
 
 // 全局 scss 变量
 import '@/assets/css/index.scss'

@@ -43,7 +43,8 @@
 - [配置 聊天室 socket.io](#socket)
 - [配置 百度地图、腾讯地图](#map)
 - [配置 three.js](#threejs)
-- [✅ 配置 three.js](#directive)
+- [✅ 配置比较常用的 vue 指令](#directive)
+- [✅ 配置省略号、文本搜索组件](#components)
 
 
 
@@ -451,3 +452,13 @@ npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 拖拽指令 v-draggable
 ```
 [▲ 回顶部](#top)
+
+
+#### <span id="components"> 配置省略号、文本搜索组件 </span>
+```
+components/ellipsis.vue
+components/SearchHighlight.vue
+```
+[▲ 回顶部](#top)
+
+

@@ -42,7 +42,13 @@ const routes = [
     path: '/storage',
     name: 'storage',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../views/storage')
-  }
+  },
+  {
+    path: '/useHeightLight',
+    name: 'useHeightLight',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../views/useHeightLight')
+  },
+  
 ]
 
 const router = new VueRouter({
