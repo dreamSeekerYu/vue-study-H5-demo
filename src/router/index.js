@@ -4,10 +4,11 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
+    cName: '',
     component: Home
   },
   {
@@ -48,7 +49,18 @@ const routes = [
     name: 'useHeightLight',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../views/useHeightLight')
   },
-  
+  {
+    path: '/ellipsis',
+    name: 'ellipsis',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../views/ellipsis')
+  },
+  {
+    path: '/waterMarker',
+    name: 'waterMarker',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../components/waterMarker')
+  },
+
+
 ]
 
 const router = new VueRouter({
