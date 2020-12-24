@@ -30,3 +30,5 @@ export const watermark = function (canvas, text) {
     canvas.toBlob(blob => resolve(blob))
   })
 }
+
+//  参考文档  https://wintc.top/article/27

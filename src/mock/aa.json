@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "vin": "LVCTEST2131396234",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T08:54:22.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131396234",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BXi7",
+        "vehicleModelName": "89kW*2/49kWh/EDU/eAWD/旗舰",
+        "vehicleModel": "2018S7C4DE16B5S",
+        "powerType": "EV",
+        "powerTypeDesc": "纯电动",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:10:22.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131396238",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:10:09.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131865840",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:09:47.000+0000"
+      },
+      {
+        "vin": "LMGFE1G2131485116",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT两驱豪华型",
+        "vehicleModel": "2014S7C1DG32B1S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:09:47.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131396233",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:09:47.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131396236",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BXi7",
+        "vehicleModelName": "89kW*2/49kWh/EDU/eAWD/旗舰",
+        "vehicleModel": "2018S7C4DE16B5S",
+        "powerType": "EV",
+        "powerTypeDesc": "纯电动",
+        "createEmpId": 2019023210,
+        "createEmpName": "总部员工",
+        "createTime": "2020-12-11T07:07:00.000+0000"
+      },
+      {
+        "vin": "LVGTEST2131865842",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 50000290,
+        "createEmpName": "赵彩云",
+        "createTime": "2020-12-10T06:21:17.000+0000"
+      },
+      {
+        "vin": "LVGTEST01202060537",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 50000290,
+        "createEmpName": "赵彩云",
+        "createTime": "2020-12-10T06:01:15.000+0000"
+      },
+      {
+        "vin": "LVGTEST01202050479",
+        "vehicleType": "BENCH_CAR",
+        "vehicleTypeDesc": "台架车",
+        "vehicleSeriesName": "BX7",
+        "vehicleModelName": "2.0TGDI/6AT四驱豪华型",
+        "vehicleModel": "2014S7C1DG32B2S",
+        "powerType": "FUEL",
+        "powerTypeDesc": "传统车",
+        "createEmpId": 50000290,
+        "createEmpName": "赵彩云",
+        "createTime": "2020-12-10T06:00:00.000+0000"
+      }
+    ],
+    "pageSize": 10,
+    "pageIndex": 1,
+    "pageCount": 2,
+    "totalCount": 11
+  },
+  "code": "200",
+  "msg": "成功"
+}

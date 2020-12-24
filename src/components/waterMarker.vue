@@ -43,6 +43,5 @@ export default {
   width: 1600px;
   height: 1500px;
   border: 1px solid #000;
-
 }
 </style>

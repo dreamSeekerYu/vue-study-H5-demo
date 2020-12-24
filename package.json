@@ -9,6 +9,7 @@
     "stage": "vue-cli-service build --mode staging"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "core-js": "^3.6.5",
@@ -17,7 +18,10 @@
     "html2canvas": "^1.0.0-rc.5",
     "js-cookie": "^2.2.1",
     "mand-mobile": "^2.5.10",
+    "mockjs": "^1.1.0",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
+    "nprogress": "^0.2.0",
     "qrcode.vue": "^1.7.0",
     "regenerator-runtime": "^0.13.5",
     "sass-loader": "^8.0.2",
