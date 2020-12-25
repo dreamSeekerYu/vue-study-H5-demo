@@ -59,13 +59,18 @@ export const routes = [
     name: 'waterMarker',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../components/waterMarker')
   },
-   {
+  {
     path: '/autoBindRequestTest',
     name: 'autoBindRequestTest',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../views/autoBindRequestTest')
   },
 
-  
+  {
+    path: '/elTabPage',
+    name: 'elTabPage',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../views/elTabPage/index')
+  },
+
 
 
 ]
