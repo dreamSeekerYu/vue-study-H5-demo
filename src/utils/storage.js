@@ -93,3 +93,26 @@ const token = 'token'
 export const getToken = (tokenKey = token) => Cookie.get(tokenKey)
 export const setToken = (value, tokenKey = token) => Cookie.set(tokenKey, value)
 export const removeToken = (tokenKey = token) => Cookie.remove(tokenKey)
+
+// 整体抛出  参考 storage copy.js 做 key 的校验和加减密，防止信息泄露
+
+export default {
+  setSessionStorage,
+  getSessionStorage,
+  clearSessionStorage,
+  removeSessionStorage,
+
+  setLocalStorage,
+  getLocalStorage,
+  removeLocalStorage,
+  clearLocalStorage,
+
+  setCookie,
+  getCookie,
+  removeCookie,
+
+  getToken,
+  setToken,
+  removeToken
+
+}

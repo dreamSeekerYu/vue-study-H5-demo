@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import { pageMixins } from '../mixin'
 
 import about from '../views/About.vue'
-
+console.log(about)
 Vue.use(VueRouter)
 
 // 加载混合器
