@@ -45,9 +45,9 @@
 - [配置 three.js](#threejs)
 - [✅ 配置比较常用的 vue 指令](#directive)
 - [✅ 配置省略号、文本搜索组件](#components)
-
-
-
+- [✅ 关于路由守卫](#router)
+- 
+- 
 [cli 配合文件官网](https://cli.vuejs.org/config/)
 
 ```
@@ -122,8 +122,12 @@ Vue.prototype.$cdn = $cdn
 ```
 gitHub 配置 zeit 上线
 https://zeit.co/signup 关联 github 账号和 github 项目即可
+
 访问地址：
 https://vue-study-h5-demo.now.sh/
+
+github 地址
+https://github.com/dreamSeekerYu/vue-study-H5-demo
 ```
 
 [▲ 回顶部](#top)
@@ -439,8 +443,8 @@ npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 
 [▲ 回顶部](#top)
 
-
 #### <span id="directive"> 配置比较常用的 vue 指令 </span>
+
 ```
 复制粘贴指令 v-copy
 长按指令 v-longpress
@@ -451,15 +455,73 @@ npm install --save qrcode.vue 使用参考 src/components/qrcode.vue 文件
 实现页面水印 v-waterMarker
 拖拽指令 v-draggable
 ```
+src/main.js 中的 `Vue.use(Permission)`，如需禁用权限指令（使权限按钮全部展示）则改为 `Vue.use(Permission, {disable: true})`即可，若不需要则无需修改此文件（待实现）
+
+大家在使用v-permission的过程中，最好在使用此指令的元素上加一个key属性，属性值为权限code，这样可以避免，vue动态更新dom树的过程中重复使用此元素而出现的意外情况
+
 [▲ 回顶部](#top)
 
-
 #### <span id="components"> 配置省略号、文本搜索组件 </span>
+
 ```
 components/ellipsis.vue
 components/SearchHighlight.vue
 ```
+
 [▲ 回顶部](#top)
 
+#### <span id="router"> 关于路由守卫 </span>
+
+- 关于当前路由改变，但是该组件被复用时不触发 mounted 钩子
+
+> 组件内的守卫
+>
+> > 你可以在路由组件内直接定义以下路由导航守卫：
+> >
+> > - beforeRouteEnter
+> > - beforeRouteUpdate (2.2 新增)
+> > - beforeRouteLeave
+
+```
+const Foo = {
+  template: `...`,
+  beforeRouteEnter (to, from, next) {
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 不！能！获取组件实例 `this`
+    // 因为当守卫执行前，组件实例还没被创建
+  },
+  beforeRouteUpdate (to, from, next) {
+    // 在当前路由改变，但是该组件被复用时调用
+    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 `this`
+  },
+  beforeRouteLeave (to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+  }
+}
+```
+
+beforeRouteEnter 守卫 不能 访问 this，因为守卫在导航确认前被调用,因此即将登场的新组件还没被创建。不过，你可以通过传一个
+回调给 next 来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。
+
+```
+beforeRouteEnter (to, from, next) {
+  next(vm => {
+    // 通过 `vm` 访问组件实例
+  })
+}
+```
+
+你可以 在 beforeRouteLeave 中直接访问 this。这个离开守卫通常用来禁止用户在还未保存修改前突然离开。可以通过 next(false)
+来取消导航。
+
+> >
+>
+> 引用：[原文链接](https://router.vuejs.org/zh-cn/advanced/navigation-guards.html) [▲ 回顶部](#top)
 
 自定义组件 loading 和 alert 没有导入，只是复制了一份模板用来参考组件 封装包裹方法的
+
+
+
