@@ -1,8 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import { pageMixins } from '../mixin'
+
+import about from '../views/About.vue'
 
 Vue.use(VueRouter)
+
+// 加载混合器
+const extendMixin = (instance, ...mixins) => {
+  instance.mixins = instance.mixins ? instance.mixins.concat(mixins) : mixins
+  return instance
+}
 
 export const routes = [
   {
@@ -17,7 +26,11 @@ export const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    // 两种导入页面级 mixins 的方式
+    component: extendMixin(about, pageMixins)
+    // component: () => {
+    //   return import(/* webpackChunkName: "about" */ '../views/About.vue').then(page => extendMixin(page.default, pageMixins))
+    // }
   },
   {
     path: '/pug',
@@ -70,6 +83,13 @@ export const routes = [
     name: 'elTabPage',
     component: () => import(/* webpackChunkName: "mand-ui" */ '../views/elTabPage/index')
   },
+  {
+    path: '/asyncFund',
+    name: 'asyncFund',
+    component: () => import(/* webpackChunkName: "mand-ui" */ '../views/asyncFund/index')
+  },
+
+
 
 
 

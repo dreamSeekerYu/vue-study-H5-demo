@@ -42,6 +42,9 @@ import './directive/ellipsis'
 // 全局 scss 变量
 import '@/assets/css/index.scss'
 
+import mixin from './mixin'
+Vue.mixin(mixin)
+
 Vue.config.productionTip = false
 
 new Vue({
