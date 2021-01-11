@@ -462,3 +462,4 @@ components/SearchHighlight.vue
 [▲ 回顶部](#top)
 
 
+自定义组件 loading 和 alert 没有导入，只是复制了一份模板用来参考组件 封装包裹方法的
