@@ -45,7 +45,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "postcss-pxtorem": "^5.1.1",
     "prettier": "^1.19.1",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "pug-html-loader": "^1.1.5",
     "pug-plain-loader": "^1.0.0",
     "script-ext-html-webpack-plugin": "^2.1.4",
